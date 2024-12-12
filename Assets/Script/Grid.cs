@@ -80,11 +80,11 @@ public class Grid : MonoBehaviour
         matNum = 0;
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
-        int num = -1; 
+        
 
         for (int y = 0; y < 8; y++)
         {
-                
+            int num = -1;
             for (int x = 0; x < 6; x++)
             {
                 UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
@@ -113,10 +113,9 @@ public class Grid : MonoBehaviour
                 }
             }
         }
-
         for (int x = 0; x < 6; x++)
         {
-
+            int num = -1;
             for (int y = 0; y < 8; y++)
             {
                 UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
@@ -174,11 +173,6 @@ public class Grid : MonoBehaviour
 
     public void clearMatch()
     {
-        // take the match code and find out with columns to move down
-        // find if its vert or horizontal
-        // drop it by the count if vertical, drop by 1 if horizontal
-        // generate random icons for the empty grids
-
         for (int d = 0; d < matNum; d++)
         {
             int temp, x, y, length, dir;
@@ -190,39 +184,48 @@ public class Grid : MonoBehaviour
             x = temp % 10;
             temp /= 10;
             length = temp % 10;
-            UnityEngine.Debug.Log("DEBUG: dir x y length: " + dir + " " + x + " " + y + " " + length);
 
-            if (dir == 2) // if true it's verticle
+            if (dir == 2) // Vertical match
             {
-                for (int p = y; p > 0; p--)
+                // Start from the matched row and move up
+                for (int p = y; p >= 0; p--)
                 {
-                    UnityEngine.Debug.Log("DEBUG: p = " + p);
                     if (p - length >= 0)
                     {
-                        UnityEngine.Debug.Log("DEBUG: p minus length = " + (p - length));
+                        // Move icons down from above
                         map[x, p] = map[x, p - length];
                     }
                     else
                     {
+                        // Generate new icons for top rows
                         map[x, p] = UnityEngine.Random.Range(0, 9);
                     }
                 }
             }
-            if (dir == 1)
+
+            if (dir == 1) // Horizontal match
             {
-                for (int p = y; p > 0; p--)
+                // Process each row from the matched row upwards
+                for (int p = y; p >= 0; p--)
                 {
-                    for (int g = x; g > 0; g--)
+                    // Process each column from the matched column to the right
+                    for (int g = x; g < 6; g++)
                     {
-                        UnityEngine.Debug.Log("DEBUG: p = " + p + " , g = " + g);
-                        if (p > 0 && g > 0)
+                        if (p - 1 >= 0)
+                        {
+                            // Move icons down from above
                             map[g, p] = map[g, p - 1];
+                        }
                         else
+                        {
+                            // Generate new icons for top rows
                             map[g, p] = UnityEngine.Random.Range(0, 9);
+                        }
                     }
                 }
             }
         }
+
         CheckMap();
     }
 
