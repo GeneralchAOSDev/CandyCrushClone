@@ -4,15 +4,19 @@ using UnityEngine;
 using System;
 using System.Text.RegularExpressions;
 using UnityEngine.Windows;
-
+using DG.Tweening;
+using System.Runtime.ConstrainedExecution;
 public class Icon : MonoBehaviour
 {
     Vector3 ogClick;
     Vector3 newClick;
+    Vector3 oldPos;
     //int[] elPos = new int[2]; 
     int num;
     Grid grid;
     Regex regex = new Regex(@"\d+");
+   
+    [SerializeField] private float maxDragDistance = 1.0f; // Maximum distance the object can move during drag
 
     Match match;
     void Start()
@@ -30,7 +34,7 @@ public class Icon : MonoBehaviour
     }
     private void OnMouseDown()
     {
-
+        oldPos = transform.position;
         match = regex.Match(gameObject.name);
         if (match.Success)
         {
@@ -70,26 +74,47 @@ public class Icon : MonoBehaviour
         {
             if (tempX > 0)
             {
-                Debug.Log("Moving Left");
+                //Debug.Log("Moving Right");
+                Vector3 animate = transform.position;
+                animate = new Vector3(animate.x - 0.5f, animate.y, animate.z);
+                if (animate.x - oldPos.x > -1f)
+                {
+                    transform.DOMove(animate, 1);
+                }
                 
             }
             else
             {
-                Debug.Log("Moving Right");
-                
+                //Debug.Log("Moving Left");
+                Vector3 animate = transform.position;
+                animate = new Vector3(animate.x + 0.5f, animate.y, animate.z);
+                if (animate.x - oldPos.x < 1f)
+                {
+                    transform.DOMove(animate, 1);
+                }
             }
         }
         else
         {
             if (tempY > 0)
             {
-                Debug.Log("Moving Down");
-                
+                //Debug.Log("Moving Down");
+                Vector3 animate = transform.position;
+                animate = new Vector3(animate.x, animate.y - 0.5f, animate.z);
+                if (animate.y - oldPos.y > -1f)
+                {
+                    transform.DOMove(animate, 1);
+                }
             }
             else
             {
-                Debug.Log("Moving Up");
-                
+                //Debug.Log("Moving Up");
+                Vector3 animate = transform.position;
+                animate = new Vector3(animate.x, animate.y + 0.5f, animate.z);
+                if (animate.y - oldPos.y < 1f)
+                {
+                    transform.DOMove(animate, 1);
+                }
             }
 
 
@@ -99,6 +124,8 @@ public class Icon : MonoBehaviour
 
     private void OnMouseUp()
     {
+        transform.DOKill();
+        transform.position = oldPos;
         double tempX, tempY;
         int neX, neY; // the position of the targeted element
 
