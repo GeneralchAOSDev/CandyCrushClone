@@ -113,17 +113,18 @@ public class Grid : MonoBehaviour
             int num = -1;
             for (int x = 0; x < 6; x++)
             {
-                UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+                //UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
                     while(num == map[x, y])
                     {
+                        
                         count++;
                         x++;
                         if (x >= 6)
                             break;
-                        ////UnityEngine.Debug.Log(count + " matching in a row");
+                        //UnityEngine.Debug.Log(count + " matching in a row");
                     }
                     if (count >= 3)
                     {
@@ -131,6 +132,10 @@ public class Grid : MonoBehaviour
                         match[matNum] = (count * 1000) + (100 * (x - 1)) + (10 * y) + 1; // recording a code to represent the location of the match
                         matNum++;   // 1000 is left to right, 100 * x represents the x coordinate, 
                                     // 10 * y represents the y coordinate and count is how many are in the row
+                    }
+                    if(count == 2 && x < 6)
+                    {
+                        num = map[x, y];
                     }
                 }
                 else
@@ -144,7 +149,7 @@ public class Grid : MonoBehaviour
             int num = -1;
             for (int y = 0; y < 8; y++)
             {
-               UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+               //UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
@@ -162,6 +167,10 @@ public class Grid : MonoBehaviour
                         match[matNum] = (count*1000) + (100 * x) + (10 * (y-1)) + 2; // recording a code to represent the location of the match
                         matNum++;   // 2000 is up to down, 100 * x represents the x coordinate, 
                                     // 10 * y represents the y coordinate and count is how many are in the row
+                    }
+                    if(count == 2 && y < 8)
+                    {
+                        num = map[x, y];
                     }
                 }
                 else
