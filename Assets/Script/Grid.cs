@@ -27,7 +27,7 @@ public class Grid : MonoBehaviour
     int matNum = 0;
     //private int[,] = new map[6, 8];
     public int[,] map = new int[6, 8];
-    List<Matching> matAnim = new List<Matching>();
+    List<string> dropAnim = new List<string>();
     void Start()
     {
         DOTween.SetTweensCapacity(500,50);
@@ -65,6 +65,7 @@ public class Grid : MonoBehaviour
         //Stopwatch stopwatch = new Stopwatch();
         //stopwatch.Start();
 
+        toAnimate();
         int i = 0;
         for (int y = 0; y < 8; y++)
         {
@@ -209,12 +210,10 @@ public class Grid : MonoBehaviour
     {
         List<GameObject> list = new List<GameObject>();
         int index = 0;
-        foreach (var anim in matAnim)
+        foreach (var anim in dropAnim)
         {
-            int x = anim.x;
-            x = x + (anim.y * 6);
             // Use string interpolation to construct the name
-            GameObject obj = GameObject.Find($"bolt ({x})");
+            GameObject obj = GameObject.Find(anim);
 
             if (obj != null)
             {
@@ -228,27 +227,23 @@ public class Grid : MonoBehaviour
 
                 UnityEngine.Debug.Log($"Found GameObject: {obj.name}");
             }
-            else
-            {
-                UnityEngine.Debug.Log($"GameObject with name 'bolt({x})' not found.");
-            }
         }
-        //foreach (var twee in list)
-        //{
-        //    // Store the original Y position
-        //    float originalY = twee.transform.position.y;
+        foreach (var twee in list)
+        {
+            // Store the original Y position
+            float originalY = twee.transform.position.y;
 
-        //    // Move up by 1 unit, then return to the original position
-        //    twee.transform.DOMoveY(originalY + 1f, 0.0001f) // Move up by 1 unit over 0.5 seconds
-        //        .OnComplete(() =>
-        //        {
-        //            // Once the upward motion is complete, move back to the original position
-        //            twee.transform.DOMoveY(originalY, 0.5f);
-        //        });
-        //}
-        matAnim.Clear();
+            // Move up by 1 unit, then return to the original position
+            twee.transform.DOMoveY(originalY + 1f, 0.0001f) // Move up by 1 unit over 0.5 seconds
+                .OnComplete(() =>
+                {
+                    // Once the upward motion is complete, move back to the original position
+                    twee.transform.DOMoveY(originalY, 0.5f);
+                });
+        }
+        dropAnim.Clear();
     }
-        public void clearMatching()
+    public void clearMatching()
     {
         UnityEngine.Debug.Log("Number of matches = " + matNum);
         for (int d = 0; d < matNum; d++)
@@ -262,15 +257,16 @@ public class Grid : MonoBehaviour
             x = temp % 10;
             temp /= 10;
             length = temp % 10;
-            bool ver = (dir == 2) ? true : false;
-            Matching mat = new Matching(x,y, length, ver);
-            matAnim.Add(mat);
             if (dir == 2) // Vertical match
             {
 
                 // Start from the matched row and move up
                 for (int p = y; p >= 0; p--)
                 {
+                    int xLoc = x;
+                    xLoc = xLoc + (p * 6);
+                    // Use string interpolation to construct the name
+                    dropAnim.Add($"bolt ({xLoc})");
                     if (p - length >= 0)
                     {
                         // Move icons down from above
@@ -290,16 +286,23 @@ public class Grid : MonoBehaviour
                 {
                     for (int q = x; q > x - length; q--)
                     {
+                        int xLoc = q;
+                        xLoc = xLoc + (p * 6);
+                        // Use string interpolation to construct the name
+                        dropAnim.Add($"bolt ({xLoc})");
                         map[q, p] = map[q, p - 1];
                     }
                 }
                 for (int q = x; q > x - length; q--)
                 {
+                    int xLoc = q;
+                    // Use string interpolation to construct the name
+                    dropAnim.Add($"bolt ({xLoc})");
                     map[q, 0] = UnityEngine.Random.Range(0, 5);
                 }
             }
+            UpdateMap();
         }
-        toAnimate();
         matNum = 0;
         CheckMap();
     }
