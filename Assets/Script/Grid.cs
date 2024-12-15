@@ -1,9 +1,24 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
+public class Matching
+{
+    // Fields (variables)
+    public int temp, x, y, length;
+    public bool vert;
 
+    // Constructor
+    public Matching(int x, int y, int length, bool vert)
+    {
+        this.x = x;
+        this.y = y;
+        this.length = length;
+        this.vert = vert;
+    }
+}
 public class Grid : MonoBehaviour
 {
     public GameObject[] icons;
@@ -12,17 +27,17 @@ public class Grid : MonoBehaviour
     int matNum = 0;
     //private int[,] = new map[6, 8];
     public int[,] map = new int[6, 8];
-    
-
+    List<Matching> matAnim = new List<Matching>();
     void Start()
     {
+        DOTween.SetTweensCapacity(500,50);
         int y = -1;
         int x = 0;
         for (int i = 0; i < icons.Length; i++)
         {
             x++;
             SpriteRenderer spriteRenderer = icons[i].GetComponent<SpriteRenderer>();
-            int r = UnityEngine.Random.Range(0, 9);
+            int r = UnityEngine.Random.Range(0, 5);
             spriteRenderer.sprite = sprites[r];
             if(i%6 == 0)
             {
@@ -83,7 +98,7 @@ public class Grid : MonoBehaviour
             }
         }
 
-       // UnityEngine.Debug.Log(dMap);
+        UnityEngine.Debug.Log(dMap);
     }
     public void CheckMap()
     {
@@ -98,7 +113,7 @@ public class Grid : MonoBehaviour
             int num = -1;
             for (int x = 0; x < 6; x++)
             {
-                ////UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+                UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
@@ -129,7 +144,7 @@ public class Grid : MonoBehaviour
             int num = -1;
             for (int y = 0; y < 8; y++)
             {
-               // //UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+               UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
@@ -168,7 +183,7 @@ public class Grid : MonoBehaviour
         
         stopwatch.Stop();
         ////UnityEngine.Debug.Log("Grid Updated in " + stopwatch.Elapsed.TotalSeconds + "s");
-        ////UnityEngine.Debug.Log("Number of Matches found: " + matNum );
+        ////UnityEngine.Debug.Log("Number of Matchinges found: " + matNum );
         for(int d = 0 ; d < matNum; d++)
         {
             ////UnityEngine.Debug.Log("Code for match number "+(d + 1)+": " + match[d]);
@@ -177,12 +192,54 @@ public class Grid : MonoBehaviour
         if(matNum > 0)
         {
            // //UnityEngine.Debug.Log("Clearing " + matNum + " matches.");
-            clearMatch();
+            clearMatching();
         }
-        
     }
 
-    public void clearMatch()
+    public void toAnimate()
+    {
+        List<GameObject> list = new List<GameObject>();
+        int index = 0;
+        foreach (var anim in matAnim)
+        {
+            int x = anim.x;
+            x = x + (anim.y * 6);
+            // Use string interpolation to construct the name
+            GameObject obj = GameObject.Find($"bolt ({x})");
+
+            if (obj != null)
+            {
+                SpriteRenderer renderer = obj.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                {
+                    list.Add(obj);
+                    index++;
+                    //renderer.color = Color.red;
+                }
+
+                UnityEngine.Debug.Log($"Found GameObject: {obj.name}");
+            }
+            else
+            {
+                UnityEngine.Debug.Log($"GameObject with name 'bolt({x})' not found.");
+            }
+        }
+        //foreach (var twee in list)
+        //{
+        //    // Store the original Y position
+        //    float originalY = twee.transform.position.y;
+
+        //    // Move up by 1 unit, then return to the original position
+        //    twee.transform.DOMoveY(originalY + 1f, 0.0001f) // Move up by 1 unit over 0.5 seconds
+        //        .OnComplete(() =>
+        //        {
+        //            // Once the upward motion is complete, move back to the original position
+        //            twee.transform.DOMoveY(originalY, 0.5f);
+        //        });
+        //}
+        matAnim.Clear();
+    }
+        public void clearMatching()
     {
         UnityEngine.Debug.Log("Number of matches = " + matNum);
         for (int d = 0; d < matNum; d++)
@@ -196,14 +253,12 @@ public class Grid : MonoBehaviour
             x = temp % 10;
             temp /= 10;
             length = temp % 10;
-            //UnityEngine.Debug.Log("Match Number = " + (d + 1));
-            //string direct = (dir == 2) ? "Verticle" : "Horizontal";
-            //UnityEngine.Debug.Log("Direction = " + direct);
-            //UnityEngine.Debug.Log("Length = " + length);
-            //UnityEngine.Debug.Log("x coord = " + x);
-            //UnityEngine.Debug.Log("y coord = " + y);
+            bool ver = (dir == 2) ? true : false;
+            Matching mat = new Matching(x,y, length, ver);
+            matAnim.Add(mat);
             if (dir == 2) // Vertical match
             {
+
                 // Start from the matched row and move up
                 for (int p = y; p >= 0; p--)
                 {
@@ -215,7 +270,7 @@ public class Grid : MonoBehaviour
                     else
                     {
                         // Generate new icons for top rows
-                        map[x, p] = UnityEngine.Random.Range(0, 9);
+                        map[x, p] = UnityEngine.Random.Range(0, 5);
                     }
                 }
             }
@@ -231,10 +286,11 @@ public class Grid : MonoBehaviour
                 }
                 for (int q = x; q > x - length; q--)
                 {
-                    map[0, q] = UnityEngine.Random.Range(0, 9);
+                    map[q, 0] = UnityEngine.Random.Range(0, 5);
                 }
             }
         }
+        toAnimate();
         matNum = 0;
         CheckMap();
     }

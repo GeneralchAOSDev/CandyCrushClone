@@ -16,7 +16,7 @@ public class Icon : MonoBehaviour
     Grid grid;
     Regex regex = new Regex(@"\d+");
    
-    [SerializeField] private float maxDragDistance = 1.0f; // Maximum distance the object can move during drag
+    //[SerializeField] private float maxDragDistance = 1.0f; // Maximum distance the object can move during drag
 
     Match match;
     void Start()
