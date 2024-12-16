@@ -15,12 +15,13 @@ public class Icon : MonoBehaviour
     int num;
     Grid grid;
     Regex regex = new Regex(@"\d+");
-   
+    private Animator mAnimator;
     //[SerializeField] private float maxDragDistance = 1.0f; // Maximum distance the object can move during drag
 
     Match match;
     void Start()
     {
+        mAnimator = GetComponent<Animator>();
         grid = GameObject.Find("background").GetComponent<Grid>();
         if (grid == null)
         {
@@ -30,7 +31,10 @@ public class Icon : MonoBehaviour
 
     void Update()
     {
-        
+        if (mAnimator != null)
+        { 
+            //mAnimator.SetInteger("iconType",1);
+        }
     }
     private void OnMouseDown()
     {

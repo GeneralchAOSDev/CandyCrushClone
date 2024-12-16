@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class Grid : MonoBehaviour
     //private int[,] = new map[6, 8];
     public int[,] map = new int[6, 8];
     List<string> dropAnim = new List<string>();
+    List<Matching> popAnim = new List<Matching>();
     void Start()
     {
         DOTween.SetTweensCapacity(500,50);
@@ -37,7 +39,7 @@ public class Grid : MonoBehaviour
         {
             x++;
             SpriteRenderer spriteRenderer = icons[i].GetComponent<SpriteRenderer>();
-            int r = UnityEngine.Random.Range(0, 5);
+            int r = UnityEngine.Random.Range(0, 9);
             spriteRenderer.sprite = sprites[r];
             if(i%6 == 0)
             {
@@ -205,12 +207,44 @@ public class Grid : MonoBehaviour
             clearMatching();
         }
     }
-
+    IEnumerator ResetSpriteAfterAnimation(GameObject icon, int x, int y)
+    {
+        Animator ani = icon.GetComponent<Animator>();
+        UnityEngine.Debug.Log("Waiting....");
+        // Wait for the animation to complete
+        yield return new WaitForSeconds(1);
+        UnityEngine.Debug.Log("Wait Over");
+        ani.enabled = false;
+        UpdateMap();
+    }
     public void toAnimate()
     {
         List<GameObject> list = new List<GameObject>();
         int index = 0;
-        foreach (var anim in dropAnim)
+        foreach (var anim in popAnim)
+        {
+            for (int i = 0; i < anim.length; i++)
+            {
+                int tempX = anim.x;
+                int tempY = anim.y;
+
+                if (!anim.vert) tempX -= i;
+                if (anim.vert) tempY -= i;
+                int xLoc = tempX;
+                xLoc = xLoc + (tempY * 6);
+                GameObject lookup = GameObject.Find($"bolt ({xLoc})");
+                Animator ani = lookup.GetComponent<Animator>();
+                if (ani != null)
+                {
+                    UnityEngine.Debug.Log("DEBUG Animation: (obj, x, y) = (" + lookup.name + ", "+ tempX + ", " +tempY + ")");
+                    ani.enabled = true;
+                    ani.SetInteger("iconType", map[tempX,tempY]);
+                    ResetSpriteAfterAnimation(lookup, tempX, tempY);
+                }
+            }   
+        }
+        popAnim.Clear();
+            foreach (var anim in dropAnim)
         {
             // Use string interpolation to construct the name
             GameObject obj = GameObject.Find(anim);
@@ -257,6 +291,9 @@ public class Grid : MonoBehaviour
             x = temp % 10;
             temp /= 10;
             length = temp % 10;
+            bool vert = (dir == 2) ? true : false;
+            Matching pop = new Matching(x, y, length, vert);
+            popAnim.Add(pop);
             if (dir == 2) // Vertical match
             {
 
@@ -267,6 +304,7 @@ public class Grid : MonoBehaviour
                     xLoc = xLoc + (p * 6);
                     // Use string interpolation to construct the name
                     dropAnim.Add($"bolt ({xLoc})");
+
                     if (p - length >= 0)
                     {
                         // Move icons down from above
@@ -275,7 +313,7 @@ public class Grid : MonoBehaviour
                     else
                     {
                         // Generate new icons for top rows
-                        map[x, p] = UnityEngine.Random.Range(0, 5);
+                        map[x, p] = UnityEngine.Random.Range(0, 9);
                     }
                 }
             }
@@ -298,7 +336,7 @@ public class Grid : MonoBehaviour
                     int xLoc = q;
                     // Use string interpolation to construct the name
                     dropAnim.Add($"bolt ({xLoc})");
-                    map[q, 0] = UnityEngine.Random.Range(0, 5);
+                    map[q, 0] = UnityEngine.Random.Range(0, 9);
                 }
             }
             UpdateMap();
