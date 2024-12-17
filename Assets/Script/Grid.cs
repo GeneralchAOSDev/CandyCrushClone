@@ -22,29 +22,33 @@ public class Matching
 }
 public class Grid : MonoBehaviour
 {
+
+    const int COL = 6;
+    const int ROW = 8;
+    public int difficulty = 3;
     public GameObject[] icons;
     public Sprite[] sprites;
     int[] match = new int[16];
     int matNum = 0;
-    //private int[,] = new map[6, 8];
-    public int[,] map = new int[6, 8];
+    //private int[,] = new map[COL, ROW];
+    public int[,] map = new int[COL, ROW];
     List<string> dropAnim = new List<string>();
     List<Matching> popAnim = new List<Matching>();
     void Start()
     {
-        DOTween.SetTweensCapacity(500,50);
+        DOTween.SetTweensCapacity(1250,50);
         int y = -1;
         int x = 0;
         for (int i = 0; i < icons.Length; i++)
         {
             x++;
             SpriteRenderer spriteRenderer = icons[i].GetComponent<SpriteRenderer>();
-            int r = UnityEngine.Random.Range(0, 9);
+            int r = UnityEngine.Random.Range(0, difficulty);
             spriteRenderer.sprite = sprites[r];
-            if(i%6 == 0)
+            if(i%COL == 0)
             {
                 y++;
-                x = (x/6);
+                x = (x/COL);
                 if (x != 0)
                 {
                     //y--;
@@ -54,7 +58,7 @@ public class Grid : MonoBehaviour
 
             //Debug.Log("x = " + x + " y = " + y + " i = " + i);
 
-            //////UnityEngine.Debug.Log("Icon Type " + r + " at Position : " + x + ", " + y);
+            ////////UnityEngine.Debug.Log("Icon Type " + r + " at Position : " + x + ", " + y);
             map[x, y] = r;
         }
 
@@ -69,14 +73,14 @@ public class Grid : MonoBehaviour
 
         toAnimate();
         int i = 0;
-        for (int y = 0; y < 8; y++)
+        for (int y = 0; y < ROW; y++)
         {
-            ////UnityEngine.Debug.Log(" x = " + x);
-            for (int x = 0; x < 6; x++)
+            //////UnityEngine.Debug.Log(" x = " + x);
+            for (int x = 0; x < COL; x++)
             {
-                ////UnityEngine.Debug.Log(" y = " + y);
+                //////UnityEngine.Debug.Log(" y = " + y);
                 
-                ////UnityEngine.Debug.Log(" i = " + i + "x,y = " + x + "," + y);
+                //////UnityEngine.Debug.Log(" i = " + i + "x,y = " + x + "," + y);
                 SpriteRenderer spriteRenderer = icons[i].GetComponent<SpriteRenderer>();
                 i++;
                 int r = map[x, y];
@@ -85,23 +89,23 @@ public class Grid : MonoBehaviour
         }
 
         //stopwatch.Stop();
-        ////UnityEngine.Debug.Log("Grid Updated in " + stopwatch.Elapsed.TotalSeconds + "s");
+        //////UnityEngine.Debug.Log("Grid Updated in " + stopwatch.Elapsed.TotalSeconds + "s");
         //stopwatch.Reset();
     }
     public void debugMap()
     {
         string dMap = "";
-        for (int y = 0; y < 8; y++)
+        for (int y = 0; y < ROW; y++)
         {
             dMap += "\n";
-            for (int x = 0; x < 6; x++)
+            for (int x = 0; x < COL; x++)
             {
                 dMap += map[x, y];
                 dMap += " ";
             }
         }
 
-        UnityEngine.Debug.Log(dMap);
+        //UnityEngine.Debug.Log(dMap);
     }
     public void CheckMap()
     {
@@ -111,12 +115,12 @@ public class Grid : MonoBehaviour
         stopwatch.Start();
         debugMap();
 
-        for (int y = 0; y < 8; y++)
+        for (int y = 0; y < ROW; y++)
         {
             int num = -1;
-            for (int x = 0; x < 6; x++)
+            for (int x = 0; x < COL; x++)
             {
-                //UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+                ////UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
@@ -125,18 +129,18 @@ public class Grid : MonoBehaviour
                         
                         count++;
                         x++;
-                        if (x >= 6)
+                        if (x >= COL)
                             break;
-                        //UnityEngine.Debug.Log(count + " matching in a row");
+                        ////UnityEngine.Debug.Log(count + " matching in a row");
                     }
                     if (count >= 3)
                     {
-                        ////UnityEngine.Debug.Log(matNum + " horizontal matches recorded");
+                        //////UnityEngine.Debug.Log(matNum + " horizontal matches recorded");
                         match[matNum] = (count * 1000) + (100 * (x - 1)) + (10 * y) + 1; // recording a code to represent the location of the match
                         matNum++;   // 1000 is left to right, 100 * x represents the x coordinate, 
                                     // 10 * y represents the y coordinate and count is how many are in the row
                     }
-                    if(count == 2 && x < 6)
+                    if(count == 2 && x < COL)
                     {
                         num = map[x, y];
                     }
@@ -147,12 +151,12 @@ public class Grid : MonoBehaviour
                 }
             }
         }
-        for (int x = 0; x < 6; x++)
+        for (int x = 0; x < COL; x++)
         {
             int num = -1;
-            for (int y = 0; y < 8; y++)
+            for (int y = 0; y < ROW; y++)
             {
-               //UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
+               ////UnityEngine.Debug.Log("Looking at position (" + x + "," + y + ")");
                 if (num == map[x, y])
                 {
                     int count = 1;
@@ -160,18 +164,18 @@ public class Grid : MonoBehaviour
                     {
                         count++;
                         y++;
-                        if (y >= 8)
+                        if (y >= ROW)
                             break;
-                       // //UnityEngine.Debug.Log(count + " matching in a row");
+                       // ////UnityEngine.Debug.Log(count + " matching in a row");
                     }
                     if (count >= 3)
                     {
-                        ////UnityEngine.Debug.Log(matNum + " matches recorded");
+                        //////UnityEngine.Debug.Log(matNum + " matches recorded");
                         match[matNum] = (count*1000) + (100 * x) + (10 * (y-1)) + 2; // recording a code to represent the location of the match
                         matNum++;   // 2000 is up to down, 100 * x represents the x coordinate, 
                                     // 10 * y represents the y coordinate and count is how many are in the row
                     }
-                    if(count == 2 && y < 8)
+                    if(count == 2 && y < ROW)
                     {
                         num = map[x, y];
                     }
@@ -185,7 +189,7 @@ public class Grid : MonoBehaviour
 
         for (int d = 0; d < matNum; d++)
         {
-            ////UnityEngine.Debug.Log("Code for match number " + (d + 1) + ": " + match[d]);
+            //////UnityEngine.Debug.Log("Code for match number " + (d + 1) + ": " + match[d]);
         }
 
         Array.Sort(match);
@@ -194,16 +198,16 @@ public class Grid : MonoBehaviour
 
         
         stopwatch.Stop();
-        ////UnityEngine.Debug.Log("Grid Updated in " + stopwatch.Elapsed.TotalSeconds + "s");
-        ////UnityEngine.Debug.Log("Number of Matchinges found: " + matNum );
+        //////UnityEngine.Debug.Log("Grid Updated in " + stopwatch.Elapsed.TotalSeconds + "s");
+        //////UnityEngine.Debug.Log("Number of Matchinges found: " + matNum );
         for(int d = 0 ; d < matNum; d++)
         {
-            ////UnityEngine.Debug.Log("Code for match number "+(d + 1)+": " + match[d]);
+            //////UnityEngine.Debug.Log("Code for match number "+(d + 1)+": " + match[d]);
         }
         stopwatch.Reset();
         if(matNum > 0)
         {
-           // //UnityEngine.Debug.Log("Clearing " + matNum + " matches.");
+           // ////UnityEngine.Debug.Log("Clearing " + matNum + " matches.");
             clearMatching();
         }
     }
@@ -231,15 +235,17 @@ public class Grid : MonoBehaviour
                 if (!anim.vert) tempX -= i;
                 if (anim.vert) tempY -= i;
                 int xLoc = tempX;
-                xLoc = xLoc + (tempY * 6);
+                xLoc = xLoc + (tempY * COL);
                 GameObject lookup = GameObject.Find($"bolt ({xLoc})");
+                if (lookup == null)
+                    UnityEngine.Debug.Log($"bolt ({xLoc}) not found!");
                 Animator ani = lookup.GetComponent<Animator>();
                 if (ani != null)
                 {
-                    UnityEngine.Debug.Log("DEBUG Animation: (obj, x, y) = (" + lookup.name + ", "+ tempX + ", " +tempY + ")");
+                    //UnityEngine.Debug.Log("DEBUG Animation: (obj, x, y) = (" + lookup.name + ", "+ tempX + ", " +tempY + ")");
                     ani.enabled = true;
                     ani.SetInteger("iconType", map[tempX,tempY]);
-                    ResetSpriteAfterAnimation(lookup, tempX, tempY);
+                    StartCoroutine( ResetSpriteAfterAnimation(lookup, tempX, tempY));
                 }
             }   
         }
@@ -259,7 +265,7 @@ public class Grid : MonoBehaviour
                     //renderer.color = Color.red;
                 }
 
-                UnityEngine.Debug.Log($"Found GameObject: {obj.name}");
+                //UnityEngine.Debug.Log($"Found GameObject: {obj.name}");
             }
         }
         foreach (var twee in list)
@@ -279,7 +285,7 @@ public class Grid : MonoBehaviour
     }
     public void clearMatching()
     {
-        UnityEngine.Debug.Log("Number of matches = " + matNum);
+        //UnityEngine.Debug.Log("Number of matches = " + matNum);
         for (int d = 0; d < matNum; d++)
         {
             int temp, x, y, length, dir;
@@ -301,7 +307,7 @@ public class Grid : MonoBehaviour
                 for (int p = y; p >= 0; p--)
                 {
                     int xLoc = x;
-                    xLoc = xLoc + (p * 6);
+                    xLoc = xLoc + (p * COL);
                     // Use string interpolation to construct the name
                     dropAnim.Add($"bolt ({xLoc})");
 
@@ -313,7 +319,7 @@ public class Grid : MonoBehaviour
                     else
                     {
                         // Generate new icons for top rows
-                        map[x, p] = UnityEngine.Random.Range(0, 9);
+                        map[x, p] = UnityEngine.Random.Range(0, difficulty);
                     }
                 }
             }
@@ -325,7 +331,7 @@ public class Grid : MonoBehaviour
                     for (int q = x; q > x - length; q--)
                     {
                         int xLoc = q;
-                        xLoc = xLoc + (p * 6);
+                        xLoc = xLoc + (p * COL);
                         // Use string interpolation to construct the name
                         dropAnim.Add($"bolt ({xLoc})");
                         map[q, p] = map[q, p - 1];
@@ -336,7 +342,7 @@ public class Grid : MonoBehaviour
                     int xLoc = q;
                     // Use string interpolation to construct the name
                     dropAnim.Add($"bolt ({xLoc})");
-                    map[q, 0] = UnityEngine.Random.Range(0, 9);
+                    map[q, 0] = UnityEngine.Random.Range(0, difficulty);
                 }
             }
             UpdateMap();
@@ -349,12 +355,12 @@ public class Grid : MonoBehaviour
     public void Swap(int startX, int startY, int tarX, int tarY)
     {
 
-        ////UnityEngine.Debug.Log("The starting coords (x,y) are: " + startX + "," + startY + ". And the target coords are: " + tarX + "," + tarY);
+        //////UnityEngine.Debug.Log("The starting coords (x,y) are: " + startX + "," + startY + ". And the target coords are: " + tarX + "," + tarY);
         int temp;
         
         temp = map[startX, startY];
 
-        ////UnityEngine.Debug.Log("Temp, Start and Target values are: " +  temp + " ," +  map[startX, startY] + " ," + map[tarX, tarY]);
+        //////UnityEngine.Debug.Log("Temp, Start and Target values are: " +  temp + " ," +  map[startX, startY] + " ," + map[tarX, tarY]);
 
         map[startX, startY] = map[tarX, tarY];
         map[tarX, tarY] = temp;
