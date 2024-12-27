@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 106053317}
   - component: {fileID: 106053319}
   - component: {fileID: 106053320}
+  - component: {fileID: 106053321}
   m_Layer: 0
   m_Name: bolt (27)
   m_TagString: Untagged
@@ -256,6 +257,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &106053321
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106053316}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &209961071
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +290,7 @@ GameObject:
   - component: {fileID: 209961072}
   - component: {fileID: 209961074}
   - component: {fileID: 209961075}
+  - component: {fileID: 209961076}
   m_Layer: 0
   m_Name: bolt (14)
   m_TagString: Untagged
@@ -389,6 +412,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &209961076
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209961071}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &234814136
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +445,7 @@ GameObject:
   - component: {fileID: 234814137}
   - component: {fileID: 234814139}
   - component: {fileID: 234814140}
+  - component: {fileID: 234814141}
   m_Layer: 0
   m_Name: bolt (30)
   m_TagString: Untagged
@@ -522,6 +567,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &234814141
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234814136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &253831809
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +600,7 @@ GameObject:
   - component: {fileID: 253831810}
   - component: {fileID: 253831812}
   - component: {fileID: 253831813}
+  - component: {fileID: 253831814}
   m_Layer: 0
   m_Name: bolt (10)
   m_TagString: Untagged
@@ -655,6 +722,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &253831814
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253831809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &332675310
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +755,7 @@ GameObject:
   - component: {fileID: 332675311}
   - component: {fileID: 332675313}
   - component: {fileID: 332675314}
+  - component: {fileID: 332675315}
   m_Layer: 0
   m_Name: bolt (9)
   m_TagString: Untagged
@@ -788,6 +877,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &332675315
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332675310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &411273016
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +910,7 @@ GameObject:
   - component: {fileID: 411273017}
   - component: {fileID: 411273019}
   - component: {fileID: 411273020}
+  - component: {fileID: 411273021}
   m_Layer: 0
   m_Name: bolt (31)
   m_TagString: Untagged
@@ -921,6 +1032,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &411273021
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411273016}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &418737923
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +1065,7 @@ GameObject:
   - component: {fileID: 418737924}
   - component: {fileID: 418737926}
   - component: {fileID: 418737927}
+  - component: {fileID: 418737928}
   m_Layer: 0
   m_Name: bolt (6)
   m_TagString: Untagged
@@ -1054,6 +1187,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &418737928
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418737923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &419572798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1220,7 @@ GameObject:
   - component: {fileID: 419572799}
   - component: {fileID: 419572801}
   - component: {fileID: 419572802}
+  - component: {fileID: 419572803}
   m_Layer: 0
   m_Name: bolt (12)
   m_TagString: Untagged
@@ -1187,6 +1342,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &419572803
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419572798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &465536374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1375,7 @@ GameObject:
   - component: {fileID: 465536375}
   - component: {fileID: 465536377}
   - component: {fileID: 465536378}
+  - component: {fileID: 465536379}
   m_Layer: 0
   m_Name: bolt (8)
   m_TagString: Untagged
@@ -1320,6 +1497,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &465536379
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465536374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &489882096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1530,7 @@ GameObject:
   - component: {fileID: 489882097}
   - component: {fileID: 489882099}
   - component: {fileID: 489882100}
+  - component: {fileID: 489882101}
   m_Layer: 0
   m_Name: bolt (11)
   m_TagString: Untagged
@@ -1453,6 +1652,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &489882101
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489882096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &508529388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1685,7 @@ GameObject:
   - component: {fileID: 508529389}
   - component: {fileID: 508529391}
   - component: {fileID: 508529392}
+  - component: {fileID: 508529393}
   m_Layer: 0
   m_Name: bolt (43)
   m_TagString: Untagged
@@ -1586,6 +1807,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &508529393
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508529388}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &509085528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,6 +1840,7 @@ GameObject:
   - component: {fileID: 509085529}
   - component: {fileID: 509085531}
   - component: {fileID: 509085532}
+  - component: {fileID: 509085533}
   m_Layer: 0
   m_Name: bolt (45)
   m_TagString: Untagged
@@ -1719,6 +1962,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &509085533
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509085528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &512113520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1995,7 @@ GameObject:
   - component: {fileID: 512113521}
   - component: {fileID: 512113523}
   - component: {fileID: 512113524}
+  - component: {fileID: 512113525}
   m_Layer: 0
   m_Name: bolt (7)
   m_TagString: Untagged
@@ -1852,6 +2117,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &512113525
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512113520}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +2242,7 @@ GameObject:
   - component: {fileID: 570262724}
   - component: {fileID: 570262726}
   - component: {fileID: 570262727}
+  - component: {fileID: 570262728}
   m_Layer: 0
   m_Name: bolt (22)
   m_TagString: Untagged
@@ -2077,6 +2364,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &570262728
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570262723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &710162363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2397,7 @@ GameObject:
   - component: {fileID: 710162364}
   - component: {fileID: 710162366}
   - component: {fileID: 710162367}
+  - component: {fileID: 710162368}
   m_Layer: 0
   m_Name: bolt (5)
   m_TagString: Untagged
@@ -2210,6 +2519,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &710162368
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710162363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &734180458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2552,7 @@ GameObject:
   - component: {fileID: 734180459}
   - component: {fileID: 734180461}
   - component: {fileID: 734180462}
+  - component: {fileID: 734180463}
   m_Layer: 0
   m_Name: bolt (0)
   m_TagString: Untagged
@@ -2343,6 +2674,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &734180463
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734180458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &886427015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,6 +2707,7 @@ GameObject:
   - component: {fileID: 886427016}
   - component: {fileID: 886427018}
   - component: {fileID: 886427019}
+  - component: {fileID: 886427020}
   m_Layer: 0
   m_Name: bolt (38)
   m_TagString: Untagged
@@ -2476,6 +2829,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &886427020
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886427015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &966265222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,6 +2862,7 @@ GameObject:
   - component: {fileID: 966265223}
   - component: {fileID: 966265225}
   - component: {fileID: 966265226}
+  - component: {fileID: 966265227}
   m_Layer: 0
   m_Name: bolt (18)
   m_TagString: Untagged
@@ -2609,6 +2984,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &966265227
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966265222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1003498643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,6 +3017,7 @@ GameObject:
   - component: {fileID: 1003498644}
   - component: {fileID: 1003498646}
   - component: {fileID: 1003498647}
+  - component: {fileID: 1003498648}
   m_Layer: 0
   m_Name: bolt (33)
   m_TagString: Untagged
@@ -2742,6 +3139,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1003498648
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003498643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1026525125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +3172,7 @@ GameObject:
   - component: {fileID: 1026525126}
   - component: {fileID: 1026525128}
   - component: {fileID: 1026525129}
+  - component: {fileID: 1026525130}
   m_Layer: 0
   m_Name: bolt (26)
   m_TagString: Untagged
@@ -2875,6 +3294,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1026525130
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026525125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1098984043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,6 +3327,7 @@ GameObject:
   - component: {fileID: 1098984044}
   - component: {fileID: 1098984046}
   - component: {fileID: 1098984047}
+  - component: {fileID: 1098984048}
   m_Layer: 0
   m_Name: bolt (34)
   m_TagString: Untagged
@@ -3008,6 +3449,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1098984048
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098984043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1161809700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,6 +3482,7 @@ GameObject:
   - component: {fileID: 1161809701}
   - component: {fileID: 1161809703}
   - component: {fileID: 1161809704}
+  - component: {fileID: 1161809705}
   m_Layer: 0
   m_Name: bolt (35)
   m_TagString: Untagged
@@ -3141,6 +3604,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1161809705
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161809700}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1294435250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,6 +3637,7 @@ GameObject:
   - component: {fileID: 1294435251}
   - component: {fileID: 1294435253}
   - component: {fileID: 1294435254}
+  - component: {fileID: 1294435255}
   m_Layer: 0
   m_Name: bolt (4)
   m_TagString: Untagged
@@ -3274,6 +3759,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1294435255
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294435250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1307937500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,6 +3792,7 @@ GameObject:
   - component: {fileID: 1307937501}
   - component: {fileID: 1307937503}
   - component: {fileID: 1307937504}
+  - component: {fileID: 1307937505}
   m_Layer: 0
   m_Name: bolt (47)
   m_TagString: Untagged
@@ -3407,6 +3914,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1307937505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307937500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1313380116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3947,7 @@ GameObject:
   - component: {fileID: 1313380117}
   - component: {fileID: 1313380119}
   - component: {fileID: 1313380120}
+  - component: {fileID: 1313380121}
   m_Layer: 0
   m_Name: bolt (28)
   m_TagString: Untagged
@@ -3540,6 +4069,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1313380121
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313380116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1333424753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,6 +4102,7 @@ GameObject:
   - component: {fileID: 1333424754}
   - component: {fileID: 1333424756}
   - component: {fileID: 1333424757}
+  - component: {fileID: 1333424758}
   m_Layer: 0
   m_Name: bolt (13)
   m_TagString: Untagged
@@ -3673,6 +4224,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1333424758
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333424753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1366006499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +4257,7 @@ GameObject:
   - component: {fileID: 1366006500}
   - component: {fileID: 1366006502}
   - component: {fileID: 1366006503}
+  - component: {fileID: 1366006504}
   m_Layer: 0
   m_Name: bolt (2)
   m_TagString: Untagged
@@ -3806,6 +4379,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1366006504
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366006499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1397576896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +4412,7 @@ GameObject:
   - component: {fileID: 1397576897}
   - component: {fileID: 1397576899}
   - component: {fileID: 1397576900}
+  - component: {fileID: 1397576901}
   m_Layer: 0
   m_Name: bolt (39)
   m_TagString: Untagged
@@ -3939,6 +4534,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1397576901
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397576896}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1405240671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +4567,7 @@ GameObject:
   - component: {fileID: 1405240672}
   - component: {fileID: 1405240674}
   - component: {fileID: 1405240675}
+  - component: {fileID: 1405240676}
   m_Layer: 0
   m_Name: bolt (42)
   m_TagString: Untagged
@@ -4072,6 +4689,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1405240676
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405240671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1453104441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4084,6 +4722,7 @@ GameObject:
   - component: {fileID: 1453104442}
   - component: {fileID: 1453104444}
   - component: {fileID: 1453104445}
+  - component: {fileID: 1453104446}
   m_Layer: 0
   m_Name: bolt (37)
   m_TagString: Untagged
@@ -4205,6 +4844,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1453104446
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453104441}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1473698900
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4877,7 @@ GameObject:
   - component: {fileID: 1473698901}
   - component: {fileID: 1473698903}
   - component: {fileID: 1473698904}
+  - component: {fileID: 1473698905}
   m_Layer: 0
   m_Name: bolt (41)
   m_TagString: Untagged
@@ -4338,6 +4999,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1473698905
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473698900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1518962330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4350,6 +5032,7 @@ GameObject:
   - component: {fileID: 1518962331}
   - component: {fileID: 1518962333}
   - component: {fileID: 1518962334}
+  - component: {fileID: 1518962335}
   m_Layer: 0
   m_Name: bolt (1)
   m_TagString: Untagged
@@ -4471,6 +5154,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1518962335
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518962330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1613571756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +5187,7 @@ GameObject:
   - component: {fileID: 1613571757}
   - component: {fileID: 1613571759}
   - component: {fileID: 1613571760}
+  - component: {fileID: 1613571761}
   m_Layer: 0
   m_Name: bolt (23)
   m_TagString: Untagged
@@ -4604,6 +5309,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1613571761
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613571756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1647842891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4634,7 +5360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71aa2c06729a314697244bc82d095f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 3
+  difficulty: 5
   icons:
   - {fileID: 734180458}
   - {fileID: 1518962330}
@@ -4694,6 +5420,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 08e3a96e49675aa41a2799af952764b5, type: 3}
   - {fileID: 21300000, guid: d5c491b7fbf024b4e91c4de8c9390c03, type: 3}
   - {fileID: 21300000, guid: eb6460db9ffec6146930e42e3a7c8270, type: 3}
+  controllers:
+  - {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  - {fileID: 9100000, guid: 928b6bbce510010408c9372eb9670a0d, type: 2}
+  - {fileID: 9100000, guid: 18b634ee37e46624f833e47d904c280c, type: 2}
+  - {fileID: 9100000, guid: 64fa4fa23dc500e488dccd87d9211198, type: 2}
+  - {fileID: 9100000, guid: acfd1e0dc1d695c4788ccbbc97bcd3e7, type: 2}
+  - {fileID: 9100000, guid: 7c65f6c355d902e4c8805d781018501e, type: 2}
+  - {fileID: 9100000, guid: ba3312360ac5dbc4e9f088174b1629f0, type: 2}
+  - {fileID: 9100000, guid: 582e1d5fbd9fff047a047166a945ff56, type: 2}
+  - {fileID: 9100000, guid: fa9ca80b30d2a6d4a8c43a1519e827ee, type: 2}
 --- !u!212 &1647842893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4773,6 +5509,7 @@ GameObject:
   - component: {fileID: 1649765598}
   - component: {fileID: 1649765600}
   - component: {fileID: 1649765601}
+  - component: {fileID: 1649765602}
   m_Layer: 0
   m_Name: bolt (3)
   m_TagString: Untagged
@@ -4894,6 +5631,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1649765602
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649765597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1704059018
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,6 +5664,7 @@ GameObject:
   - component: {fileID: 1704059019}
   - component: {fileID: 1704059021}
   - component: {fileID: 1704059022}
+  - component: {fileID: 1704059023}
   m_Layer: 0
   m_Name: bolt (40)
   m_TagString: Untagged
@@ -5027,6 +5786,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1704059023
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704059018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1940169033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +5819,7 @@ GameObject:
   - component: {fileID: 1940169034}
   - component: {fileID: 1940169036}
   - component: {fileID: 1940169037}
+  - component: {fileID: 1940169038}
   m_Layer: 0
   m_Name: bolt (16)
   m_TagString: Untagged
@@ -5160,6 +5941,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1940169038
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940169033}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1955479624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5974,7 @@ GameObject:
   - component: {fileID: 1955479625}
   - component: {fileID: 1955479627}
   - component: {fileID: 1955479628}
+  - component: {fileID: 1955479629}
   m_Layer: 0
   m_Name: bolt (19)
   m_TagString: Untagged
@@ -5293,6 +6096,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1955479629
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955479624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1957117174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5305,6 +6129,7 @@ GameObject:
   - component: {fileID: 1957117175}
   - component: {fileID: 1957117177}
   - component: {fileID: 1957117178}
+  - component: {fileID: 1957117179}
   m_Layer: 0
   m_Name: bolt (46)
   m_TagString: Untagged
@@ -5426,6 +6251,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1957117179
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957117174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1959172523
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,6 +6284,7 @@ GameObject:
   - component: {fileID: 1959172524}
   - component: {fileID: 1959172526}
   - component: {fileID: 1959172527}
+  - component: {fileID: 1959172528}
   m_Layer: 0
   m_Name: bolt (29)
   m_TagString: Untagged
@@ -5559,6 +6406,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1959172528
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959172523}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1965962101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,6 +6439,7 @@ GameObject:
   - component: {fileID: 1965962102}
   - component: {fileID: 1965962104}
   - component: {fileID: 1965962105}
+  - component: {fileID: 1965962106}
   m_Layer: 0
   m_Name: bolt (15)
   m_TagString: Untagged
@@ -5692,6 +6561,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1965962106
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965962101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1991680407
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,6 +6594,7 @@ GameObject:
   - component: {fileID: 1991680408}
   - component: {fileID: 1991680410}
   - component: {fileID: 1991680411}
+  - component: {fileID: 1991680412}
   m_Layer: 0
   m_Name: bolt (17)
   m_TagString: Untagged
@@ -5825,6 +6716,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &1991680412
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991680407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2006876805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +6749,7 @@ GameObject:
   - component: {fileID: 2006876806}
   - component: {fileID: 2006876808}
   - component: {fileID: 2006876809}
+  - component: {fileID: 2006876810}
   m_Layer: 0
   m_Name: bolt (24)
   m_TagString: Untagged
@@ -5958,6 +6871,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2006876810
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006876805}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2063169070
 GameObject:
   m_ObjectHideFlags: 0
@@ -5970,6 +6904,7 @@ GameObject:
   - component: {fileID: 2063169071}
   - component: {fileID: 2063169073}
   - component: {fileID: 2063169074}
+  - component: {fileID: 2063169075}
   m_Layer: 0
   m_Name: bolt (32)
   m_TagString: Untagged
@@ -6091,6 +7026,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2063169075
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063169070}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2097773671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,6 +7059,7 @@ GameObject:
   - component: {fileID: 2097773672}
   - component: {fileID: 2097773674}
   - component: {fileID: 2097773675}
+  - component: {fileID: 2097773676}
   m_Layer: 0
   m_Name: bolt (36)
   m_TagString: Untagged
@@ -6224,6 +7181,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2097773676
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097773671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2099183873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,6 +7214,7 @@ GameObject:
   - component: {fileID: 2099183874}
   - component: {fileID: 2099183876}
   - component: {fileID: 2099183877}
+  - component: {fileID: 2099183878}
   m_Layer: 0
   m_Name: bolt (20)
   m_TagString: Untagged
@@ -6357,6 +7336,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2099183878
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099183873}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2103728650
 GameObject:
   m_ObjectHideFlags: 0
@@ -6369,6 +7369,7 @@ GameObject:
   - component: {fileID: 2103728651}
   - component: {fileID: 2103728653}
   - component: {fileID: 2103728654}
+  - component: {fileID: 2103728655}
   m_Layer: 0
   m_Name: bolt (25)
   m_TagString: Untagged
@@ -6490,6 +7491,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2103728655
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103728650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2123775740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +7524,7 @@ GameObject:
   - component: {fileID: 2123775741}
   - component: {fileID: 2123775743}
   - component: {fileID: 2123775744}
+  - component: {fileID: 2123775745}
   m_Layer: 0
   m_Name: bolt (21)
   m_TagString: Untagged
@@ -6623,6 +7646,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2123775745
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123775740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2131582139
 GameObject:
   m_ObjectHideFlags: 0
@@ -6635,6 +7679,7 @@ GameObject:
   - component: {fileID: 2131582140}
   - component: {fileID: 2131582142}
   - component: {fileID: 2131582143}
+  - component: {fileID: 2131582144}
   m_Layer: 0
   m_Name: bolt (44)
   m_TagString: Untagged
@@ -6756,6 +7801,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!95 &2131582144
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131582139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f77f9a009db87e4d88078af41bd183d, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

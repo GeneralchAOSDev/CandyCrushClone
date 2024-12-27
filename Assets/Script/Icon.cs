@@ -1,226 +1,154 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Text.RegularExpressions;
-using UnityEngine.Windows;
 using DG.Tweening;
-using System.Runtime.ConstrainedExecution;
+
 public class Icon : MonoBehaviour
 {
-    Vector3 ogClick;
-    Vector3 newClick;
-    Vector3 oldPos;
-    //int[] elPos = new int[2]; 
-    int num;
-    Grid grid;
-    Regex regex = new Regex(@"\d+");
-    private Animator mAnimator;
-    //[SerializeField] private float maxDragDistance = 1.0f; // Maximum distance the object can move during drag
+    private const float DRAG_THRESHOLD = 0.5f;
+    private const float MAX_DRAG_DISTANCE = 1.0f;
+    private const float ANIMATION_DURATION = 0.3f;
+    private const int GRID_COLUMNS = 6;
 
-    Match match;
-    void Start()
+    [SerializeField] private float dragSpeed = 0.5f;
+
+    private Vector3 dragStartPosition;
+    private Vector3 originalPosition;
+    private Vector2Int gridPosition;
+    private Grid grid;
+    private Animator animator;
+    private bool isDragging;
+
+    private void Awake()
     {
-        mAnimator = GetComponent<Animator>();
-        grid = GameObject.Find("background").GetComponent<Grid>();
+        animator = GetComponent<Animator>();
+        grid = GameObject.Find("background")?.GetComponent<Grid>();
+
         if (grid == null)
         {
-            Debug.LogError("Grid component not found on the GameObject named 'background'.");
+            Debug.LogError($"Grid component not found for {gameObject.name}");
+            enabled = false;
+            return;
         }
+
+        // Calculate grid position from object name
+        int iconIndex = ParseIconIndex(gameObject.name);
+        gridPosition = new Vector2Int(
+            iconIndex % GRID_COLUMNS,
+            iconIndex / GRID_COLUMNS
+        );
     }
 
-    void Update()
+    private int ParseIconIndex(string objectName)
     {
-        if (mAnimator != null)
-        { 
-            //mAnimator.SetInteger("iconType",1);
-        }
+        string numberString = new string(System.Array.FindAll(
+            objectName.ToCharArray(),
+            char.IsDigit
+        ));
+
+        return int.TryParse(numberString, out int result) ? result : 0;
     }
+
     private void OnMouseDown()
     {
-        oldPos = transform.position;
-        match = regex.Match(gameObject.name);
-        if (match.Success)
-        {
-            num = int.Parse(match.Value);
-            //Debug.Log("The Icon Number is bolt(" + num + ").");
-        }
-        else
-        {
-            //Debug.Log("The Icon Number is bolt(0).");
-            num = 0;
-        }
-        //Debug.Log("Clicked on: " + gameObject.name);
-        ogClick = Camera.main.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
-        ogClick.z = 0f; 
+        if (!enabled) return;
 
-
-        //elPos[0] = num/6;
-        //Debug.Log(elPos[0]);
-        //elPos[1] = num%6;
-        //Debug.Log(elPos[1]);
-
-        //Debug.Log("Mouse Position Clicked: " + ogClick);
+        isDragging = true;
+        originalPosition = transform.position;
+        dragStartPosition = GetMouseWorldPosition();
     }
 
     private void OnMouseDrag()
     {
-        double tempX, tempY;
-        newClick = Camera.main.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
-        newClick.z = 0f; 
+        if (!isDragging) return;
 
-        tempX = ogClick.x - newClick.x;
-        tempY = ogClick.y - newClick.y;
+        Vector3 currentMousePos = GetMouseWorldPosition();
+        Vector3 dragDelta = currentMousePos - dragStartPosition;
 
-        //Debug.Log("Mouse Position Dragged To:  " + tempX + ", " + tempY);
-
-        if (Math.Abs(tempX) > Math.Abs(tempY))
+        // Determine primary drag direction
+        if (Mathf.Abs(dragDelta.x) > Mathf.Abs(dragDelta.y))
         {
-            if (tempX > 0)
-            {
-                //Debug.Log("Moving Right");
-                Vector3 animate = transform.position;
-                animate = new Vector3(animate.x - 0.5f, animate.y, animate.z);
-                if (animate.x - oldPos.x > -1f)
-                {
-                    transform.DOMove(animate, 1);
-                }
-                
-            }
-            else
-            {
-                //Debug.Log("Moving Left");
-                Vector3 animate = transform.position;
-                animate = new Vector3(animate.x + 0.5f, animate.y, animate.z);
-                if (animate.x - oldPos.x < 1f)
-                {
-                    transform.DOMove(animate, 1);
-                }
-            }
+            dragDelta.y = 0;
         }
         else
         {
-            if (tempY > 0)
-            {
-                //Debug.Log("Moving Down");
-                Vector3 animate = transform.position;
-                animate = new Vector3(animate.x, animate.y - 0.5f, animate.z);
-                if (animate.y - oldPos.y > -1f)
-                {
-                    transform.DOMove(animate, 1);
-                }
-            }
-            else
-            {
-                //Debug.Log("Moving Up");
-                Vector3 animate = transform.position;
-                animate = new Vector3(animate.x, animate.y + 0.5f, animate.z);
-                if (animate.y - oldPos.y < 1f)
-                {
-                    transform.DOMove(animate, 1);
-                }
-            }
-
-
+            dragDelta.x = 0;
         }
 
+        // Clamp drag distance
+        dragDelta = Vector3.ClampMagnitude(dragDelta, MAX_DRAG_DISTANCE);
+
+        // Animate to new position
+        Vector3 targetPosition = originalPosition + dragDelta;
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetPosition,
+            Time.deltaTime * dragSpeed
+        );
     }
 
     private void OnMouseUp()
     {
-        transform.DOKill();
-        transform.position = oldPos;
-        double tempX, tempY;
-        int neX, neY; // the position of the targeted element
+        if (!isDragging) return;
 
-        int i, j;
-        neX = 0; neY = 0;
+        isDragging = false;
+        Vector3 dragDelta = GetMouseWorldPosition() - dragStartPosition;
 
-        i = num / 6;
-        j = num % 6;
+        // Return to original position
+        transform.DOMove(originalPosition, ANIMATION_DURATION);
 
-        //Debug.Log("X coord is: " + j);
-        //Debug.Log("Y coord is: " + i);
-
-        // i is the up and down scale, j is the left and right scale, basically the x and y coordinates in the 2d array
-
-        //Debug.Log("DEBUG: i = " + i + " j = " + j);
-
-        // compare the original position to the dragged to position on the x axis and then the y axis
-
-        tempX = ogClick.x - newClick.x;
-        tempY = ogClick.y - newClick.y;
-
-        //Debug.Log("Mouse Position Dragged To:  " + tempX + ", " + tempY);
-
-        if (Math.Abs(tempX) > Math.Abs(tempY))
+        // If drag distance is too small, ignore the swap
+        if (dragDelta.magnitude < DRAG_THRESHOLD)
         {
-            if (tempX > 0)
+            return;
+        }
+
+        // Calculate swap direction
+        Vector2Int targetPosition = gridPosition;
+
+        if (Mathf.Abs(dragDelta.x) > Mathf.Abs(dragDelta.y))
+        {
+            // Horizontal swap
+            int direction = dragDelta.x > 0 ? 1 : -1;
+            if (IsValidHorizontalSwap(direction))
             {
-                //Debug.Log("Moving Left");
-                if (j == 0)
-                {
-                    // Can't move left
-                } else
-                {
-                    neX = j - 1;
-                    neY = i;
-                    //Debug.Log("The starting coords (x,y) are: " + j + "," + i + ". And the target coords are: " + neX + "," + neY);
-                    grid.Swap(j, i, neX, neY);
-                }
-            }
-            else
-            {
-                //Debug.Log("Moving Right");
-                if (j == 5)
-                {
-                    // Can't move right
-                }
-                else
-                {
-                    neX = j + 1;
-                    neY = i;
-                    //Debug.Log("The starting coords (x,y) are: " + j + "," + i + ". And the target coords are: " + neX + "," + neY);
-                    grid.Swap(j, i, neX, neY);
-                }
+                targetPosition.x += direction;
             }
         }
         else
         {
-            if (tempY > 0)
+            // Vertical swap - Note the inverted direction here
+            int direction = dragDelta.y > 0 ? -1 : 1; // Changed this line to fix up/down swapping
+            if (IsValidVerticalSwap(direction))
             {
-                //Debug.Log("Moving Down");
-                if (i == 7)
-                {
-                    // Can't move down
-                }
-                else
-                {
-                    neX = j;
-                    neY = i + 1;
-                   // Debug.Log("The starting coords (x,y) are: " + j + "," + i + ". And the target coords are: " + neX + "," + neY);
-                    grid.Swap(j, i, neX, neY);
-                }
+                targetPosition.y += direction;
             }
-            else
-            {
-                //Debug.Log("Moving Up");
-                if (i == 0)
-                {
-                    // Cant move up
-                }
-                else
-                {
-                    neX = j;
-                    neY = i - 1;
-                    //Debug.Log("The starting coords (x,y) are: " + j + "," + i + ". And the target coords are: " + neX + "," + neY);
-                    grid.Swap(j, i, neX, neY);
-                }
-            }
-
-            
         }
-        //Debug.Log("The starting coords (x,y) are: " + j + "," + i + ". And the target coords are: " + neX + "," + neY);
-        
+
+        // Perform swap if target position is different
+        if (targetPosition != gridPosition)
+        {
+            grid.Swap(
+                gridPosition.x, gridPosition.y,
+                targetPosition.x, targetPosition.y
+            );
+        }
+    }
+
+    private bool IsValidHorizontalSwap(int direction)
+    {
+        int newX = gridPosition.x + direction;
+        return newX >= 0 && newX < GRID_COLUMNS;
+    }
+
+    private bool IsValidVerticalSwap(int direction)
+    {
+        int newY = gridPosition.y + direction;
+        return newY >= 0 && newY < 8; // Using 8 for ROWS
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0f;
+        return mousePos;
     }
 }
